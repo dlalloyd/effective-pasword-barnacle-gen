@@ -41,6 +41,9 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+}
+
+.card-header{
   text-align: center;
 }
 
@@ -88,13 +91,23 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
+
 .btn:hover {
   color: rgb(171, 106, 27);
+  transform: translate(0, -20%);
 }
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+.check-control {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
 }
 
 .float-right {
