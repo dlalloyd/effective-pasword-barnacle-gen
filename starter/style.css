@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: black;
+  background-color: rgb(20, 14, 14);
   color: white;
 }
 
@@ -32,15 +32,16 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: rgb(199, 52, 52);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: burlywood;
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  text-align: center;
 }
 
 .card-header::after {
@@ -88,7 +89,9 @@ header {
   text-align: center;
   cursor: pointer;
 }
-
+.btn:hover {
+  color: rgb(171, 106, 27);
+}
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
