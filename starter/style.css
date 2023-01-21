@@ -10,6 +10,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 body {
@@ -43,7 +44,7 @@ header {
   padding: 30px 40px;
 }
 
-.card-header{
+.card-header {
   text-align: center;
 }
 

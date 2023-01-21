@@ -101,7 +101,9 @@ function generateX() {
   }
 
   if (xs.length === 0) return "";
+  return xs[Math.floor(Math.random() * xs.length)];
 }
+
 // // Add event listener to generate button
 generateEL.addEventListener("click", generatePassword);
 
