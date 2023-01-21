@@ -1,5 +1,5 @@
 // Array of special characters to be included in password
-var specialCharacters = [
+var symbols = [
   "@",
   "%",
   "+",
@@ -33,13 +33,13 @@ var specialCharacters = [
 ];
 
 // Array of numeric characters to be included in password
-var numericCharacters = ["0123456789"];
+var numbers = ["0123456789"];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = ["abcdefghijklmnopqrstuvwxyz"];
+var lowerLetters = ["abcdefghijklmnopqrstuvwxyz"];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var upperLetters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 
 const passwordEL = document.getElementById("password");
 const copyEL = document.getElementById("copy");
@@ -50,30 +50,26 @@ const numberEL = document.getElementById("number");
 const symbolEL = document.getElementById("symbol");
 const generateEL = document.getElementById("generate");
 
+// // Function for getting a random element from an array
 
-function getupperCasedCharacters() {
-  return upperCasedCharacters[
-    Math.floor(Math.random() * upperCasedCharacters.length)
-  ];
+function getUppercase() {
+  return upperLetters[Math.floor(Math.random() * upperLetters.length)];
 }
 
-function getlowerCasedCharacters() {
-  return lowerCasedCharacters[
-    Math.floor(Math.random() * lowerCasedCharacters.length)
-  ];
+function getLowercase() {
+  return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
 
-function getnumericCharacters() {
-  return numericCharacters[
-    Math.floor(Math.random() * numericCharacters.length)
-  ];
+
+function getNumber() {
+  return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
-function getspecialCharacters() {
-  return specialCharacters[
-    Math.floor(Math.random() * uspecialCharacters.length)
-  ];
+
+function getSymbol() {
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
 
 // // Function to generate password with user input
 function generatePassword() {
@@ -91,7 +87,7 @@ function generatePassword() {
 // // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
 
-// // Function for getting a random element from an array
+
 // function getRandom(arr) {}
 
 // Function to prompt user for password options
