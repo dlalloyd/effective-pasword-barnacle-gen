@@ -80,13 +80,32 @@ function generatePassword() {
   passwordEL.innerText = password;
 }
 
+// Function to prompt user for password options
+function generateX() {
+  const xs = [];
+
+  if (upperEL.checked) {
+    xs.push(getUppercase());
+  }
+
+  if (lowerEL.checked) {
+    xs.push(getLowercase());
+  }
+
+  if (numberEL.checked) {
+    xs.push(getNumber());
+  }
+
+  if (symbolEL.checked) {
+    xs.push(getSymbol());
+  }
+
+  if (xs.length === 0) return "";
+}
 // // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+generateEL.addEventListener("click", generatePassword);
 
 // function getRandom(arr) {}
-
-// Function to prompt user for password options
-// function getPasswordOptions() {}
 
 // // Get references to the #generate element
 // var generateBtn = document.querySelector("#generate");
