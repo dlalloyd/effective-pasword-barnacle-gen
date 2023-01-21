@@ -161,6 +161,20 @@ function generateX() {
 // // Add event listener to generate button
 generateEL.addEventListener("click", generatePassword);
 
+copyEL.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const password = passwordEL.innerText;
+  if (!password) {
+    return;
+  }
+
+  textarea.value = password;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+  alert("Password Copied to Clipboard");
+});
 // function getRandom(arr) {}
 
 // // Get references to the #generate element
