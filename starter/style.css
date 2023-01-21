@@ -20,6 +20,8 @@ body {
 }
 
 .wrapper {
+  background-color: rgb(19, 9, 29);
+  /* box-shadow: 0 4px 10px rgba(0 0 0 0.5); */
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -29,15 +31,15 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: burlywood;
+  color: rgb(219, 162, 86);
 }
 
 .card {
-  background-color: rgb(199, 52, 52);
+  background-color: rgb(173, 47, 47);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: burlywood;
+  color: rgb(204, 137, 49);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -52,12 +54,42 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #041220;
   height: 2px;
+}
+textarea {
+  background-color: burlywood;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px dashed #c0c7cf;
+  /* padding-bottom: 85px; */
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+  overflow: hidden;
+}
+.textarea-pass button {
+  background-color: rgb(168, 126, 9);
+  border: none;
+  color: wheat;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.25rem;
+  position: relative;
+  transform: translate(0, -80%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+}
+
+.textarea-pass:hover button {
+  opacity: 1;
+  transform: translate(0, 0%);
 }
 
 .card-body {
-  min-height: 100px;
+  background-color: rgb(173, 40, 40);
+  padding: 10px;
 }
 
 .card-footer {
@@ -78,7 +110,7 @@ header {
   clear: both;
 }
 
-.btn {
+.generate-btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
@@ -95,27 +127,24 @@ header {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.btn:hover {
-  color: rgb(171, 106, 27);
+.generate-btn:hover {
+  color: rgb(160, 137, 8);
   transform: translate(0, -20%);
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
 }
 
 .check-control {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0.5rem 0;
+  /* padding-left: 85px;
+  padding-right: 85px; */
 }
 
 .float-right {
   float: right;
 }
 
-#password {
+/* #password {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -134,7 +163,7 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
-}
+} */
 
 @media (max-width: 690px) {
   .btn {
