@@ -1,118 +1,109 @@
 // Array of special characters to be included in password
 var specialCharacters = [
-  '@',
-  '%',
-  '+',
-  '\\',
-  '/',
+  "@",
+  "%",
+  "+",
+  "\\",
+  "/",
   "'",
-  '!',
-  '#',
-  '$',
-  '^',
-  '?',
-  ':',
-  ',',
-  ')',
-  '(',
-  '}',
-  '{',
-  ']',
-  '[',
-  '~',
-  '-',
-  '_',
-  '.'
+  "!",
+  "#",
+  "$",
+  "^",
+  "?",
+  ":",
+  ",",
+  ")",
+  "(",
+  "}",
+  "{",
+  "]",
+  "[",
+  "~",
+  "-",
+  "_",
+  ".",
+  "<",
+  ">",
+  "|",
+  "¬",
+  "¦",
+  "€"
+
 ];
 
 // Array of numeric characters to be included in password
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var numericCharacters = ["0123456789"];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z'
-];
+var lowerCasedCharacters = ["abcdefghijklmnopqrstuvwxyz"];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z'
-];
+var upperCasedCharacters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+const passwordEL = document.getElementById("password");
+const copyEL = document.getElementById("copy");
+const lengthEL = document.getElementById("length");
+const upperEL = document.getElementById("upper");
+const lowerEL = document.getElementById("lower");
+const numberEL = document.getElementById("number");
+const symbolEL = document.getElementById("symbol");
+const generateEL = document.getElementById("generate");
+
+
+function getupperCasedCharacters() {
+  return upperCasedCharacters[
+    Math.floor(Math.random() * upperCasedCharacters.length)
+  ];
+}
+
+function getlowerCasedCharacters() {
+  return lowerCasedCharacters[
+    Math.floor(Math.random() * lowerCasedCharacters.length)
+  ];
+}
+
+function getnumericCharacters() {
+  return numericCharacters[
+    Math.floor(Math.random() * numericCharacters.length)
+  ];
+}
+
+function getspecialCharacters() {
+  return specialCharacters[
+    Math.floor(Math.random() * uspecialCharacters.length)
+  ];
+}
+
+// // Function to generate password with user input
+function generatePassword() {
+  const len = lenEL.value;
+
+  let password = '';
+
+  for(let i=0; i<len, i++) {
+    password += x;
+  }
+
+  EL
+}
+
+// // Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
+
+// // Function for getting a random element from an array
+// function getRandom(arr) {}
 
 // Function to prompt user for password options
-function getPasswordOptions() {
+// function getPasswordOptions() {}
 
-}
+// // Get references to the #generate element
+// var generateBtn = document.querySelector("#generate");
 
-// Function for getting a random element from an array
-function getRandom(arr) {
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-}
-
-// Function to generate password with user input
-function generatePassword() {
-
-}
-
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+//   passwordText.value = password;
+// }
