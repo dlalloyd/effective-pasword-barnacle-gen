@@ -28,8 +28,7 @@ var symbols = [
   "|",
   "¬",
   "¦",
-  "€"
-
+  "€",
 ];
 
 // Array of numeric characters to be included in password
@@ -60,33 +59,29 @@ function getLowercase() {
   return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
 
-
 function getNumber() {
   return numbers[Math.floor(Math.random() * numbers.length)];
 }
-
 
 function getSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-
 // // Function to generate password with user input
 function generatePassword() {
-  const len = lenEL.value;
+  const length = lengthEL.value;
 
-  let password = '';
+  let password = "";
 
-  for(let i=0; i<len, i++) {
+  for (let i = 0; i < length; i++) {
+    const x = generateX();
     password += x;
   }
-
-  EL
+  passwordEL.innerText = password;
 }
 
 // // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
-
 
 // function getRandom(arr) {}
 
