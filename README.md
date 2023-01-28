@@ -1,7 +1,7 @@
 # effective-pasword-barnacle-gen
 
-## An application  that  can used to generate a random password 
-The purpose of this web app is to display my proficiency using Intermediate javascript by building a feature dynamically updated HTML and CSS powered by JavaScript website.
+## An application  that  can be used to generate a random password 
+The purpose of this web app is to display my proficiency using Intermediate javascript by building a  dynamically featured and updated HTML, CSS and JavaScript website.
 
 
 ## Mock up
